@@ -12,3 +12,137 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+*{
+    box-sizing: border-box;
+}
+#navBar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: black;
+    height: 5vw;
+}
+#navBar > nav {
+    color: white;
+    font-size: 2vw;
+    text-decoration: none;
+    margin-right: 5vw;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+#navBar > #title{
+    color: rgb(131, 185, 235);
+    font-size: 3vw;
+    position: absolute;
+    font-weight: 600;
+    left: 2%;
+    
+}
+
+main{
+    width: 100%;
+    margin-top: 5vw;
+    height: 75vw;
+    margin:0;
+}
+#words{
+    height: 75vw;
+    width: 50vw;
+    margin-left: 10vw;
+    float:left;
+}
+#words > p{
+    font-size: 2vw;
+}
+#words > h4{
+    color: black;
+    height: 28px;
+    font-size: 3vw;
+}
+#user{
+    width: 25vw;
+    height: 25vw;
+    margin-top: 5vw;
+    float: right;
+    margin-right: 6vw;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+#img{
+    width: 15vw;
+}
+#articles{
+    width: 25vw;
+    height: 45vw;
+    font-size: 1.85vw;
+    margin-top: 5vw;
+    float: right;
+    margin-right: 6vw;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    border:hidden 1px grey
+}
+#art{
+    text-align: center;
+}
+#artList{
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+#artList > li{
+    
+    margin-top:1.5vw;
+}
+#imageGal{
+    height: 40vw;
+    width: 50vw;
+    margin-left: 10vw;
+    
+}
+#galTitle{
+   font-size: 3vw; 
+}
+#galTitle > span{
+    float:right;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    color: rgb(131, 185, 235);
+
+}
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+#gallery > div{
+    padding: 1vw;
+    flex: 1 0 33%;
+}
+#gallery > div > img{
+    
+    width: 12vw;
+}
+footer{
+    background-color: rgb(131, 185, 235);
+    height: 4vw;
+    padding: 1vw;
+    font-size: 2vw;
+
+}
+#floatyThing{
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    font-size: 44px;
+}

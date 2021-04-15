@@ -36,6 +36,9 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(function(each){
+  each.calories = ((each.carbs * 4) + (each.fat * 9) + (each.protein * 4));
+})
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,6 +84,10 @@ const products = [
 */
 
 //CODE HERE
+let saleProducts = products.map(function(el){
+  el.price = el.price - el.price * .25
+  return el;
+})
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -91,7 +98,9 @@ const products = [
 */
 
 //CODE HERE
-
+let blueProducts = products.filter(function(el){
+  return el.color.includes('blue')})
+  
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -100,7 +109,12 @@ const products = [
 */
 
 //CODE HERE
+blueProducts
 
+let orderTotal = blueProducts.reduce(function(acc, el){
+  return acc += el.price;
+},0)
+orderTotal
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
   For these problems we will be using the objects below, contactInfo and shippingInfo,
@@ -130,6 +144,7 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let helensInfo = Object.assign(contactInfo, shippingInfo);
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,14 +154,17 @@ const shippingInfo = {
 */
 
 //CODE HERE
-
+let ellensInfo = {...helensInfo};
+ellensInfo.name = 'Ellen';
+ellensInfo.email = 'ellen@email.com'
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
 //CODE HERE
-
+let {email} = ellensInfo;
+email
 ////////////////////PROBLEM 8////////////////////
 /*
   In a single expression (one line), save the zip code and state 
@@ -154,6 +172,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let {zipCode, state} = ellensInfo;
+
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
@@ -216,6 +236,7 @@ const userInfo = {
 */
 
 //CODE HERE
+let shouldAlert = userInfo.settings.alerts;
 
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -224,6 +245,8 @@ const userInfo = {
 */
 
 //CODE HERE
+let topic = userInfo.topics[userInfo.topics.length-1];
+
 
 ////////////////////PROBLEM 11////////////////////
 /*
@@ -232,6 +255,7 @@ const userInfo = {
 */
 
 //CODE HERE
+let commenterId = userInfo.comments[1].responses[0].userId;
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -251,7 +275,20 @@ const userInfo = {
 */
 
 //CODE HERE
-
+const person = {
+  name: 'kyle',
+  age: 28,
+  jobs: ['BlenderBottle', "Student", 'Athlete'],
+  birthday: function(){this.age += 1},
+  favorites: {
+    color: 'green',
+    number: 22,
+    book: 'Code',
+    
+  },
+  kids: [{name: 'rj', age: 1.5},{name: 'naiomi', age: 0}
+    ]
+}
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
   For the last two problems, you will be determining the 
@@ -276,7 +313,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+ let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -289,6 +326,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+let context2 = window
 //let context2 = global
 //let context2 = workout

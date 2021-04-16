@@ -98,7 +98,7 @@ let saleProducts = products.map(function(el){
 */
 
 //CODE HERE
-let blueProducts = products.filter(function(el){
+let blueProducts = saleProducts.filter(function(el){
   return el.color.includes('blue')})
   
 ////////////////////PROBLEM 4////////////////////
@@ -172,7 +172,7 @@ email
 */
 
 //CODE HERE
-let {zipCode, state} = ellensInfo;
+const {zipCode, state} = shippingInfo;
 
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////

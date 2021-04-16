@@ -59,7 +59,7 @@ animalsCopy.push('elephant')
 
 //CODE HERE
 
-const compareNums = (a,b)=>{return a > b? a: b};
+const compareNums = (num1, num2)=> num1 > num2? num1: num2
 //???
  
 ////////////////////PROBLEM 5////////////////////
@@ -72,7 +72,7 @@ const compareNums = (a,b)=>{return a > b? a: b};
 */
 
 //CODE HERE
-const bestMovie = (x)=>{return `${x} is the best movie ever!`}
+const bestMovie = (movie)=>{return `${movie} is the best movie ever!`}
 
   
 ////////////////////PROBLEM 6////////////////////
@@ -125,7 +125,7 @@ delete gameInfo.rating;
 */
 
 //CODE HERE
- for (var prop in shapes){
+ for (let prop in shapes){
      if (shapes[prop] % 2 != 0){
         delete shapes[prop];
      }
@@ -173,8 +173,8 @@ const classes = [
 
 //CODE HERE
 
-for (var i = 0; i < classes.length; i++){
-    for (var prop in classes[i]){
+for (let i = 0; i < classes.length; i++){
+    for (let prop in classes[i]){
         if (classes[i][prop] === true){
             classes[i][prop] = false;
         }
